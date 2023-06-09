@@ -1,16 +1,18 @@
 # yes_no_app
 
-A new Flutter project.
+ChatBot Flutter
 
-## Getting Started
+## Descripcion
 
-This project is a starting point for a Flutter application.
+Una aplicacion chatbot de flutter usando la API de YesNo.
 
-A few resources to get you started if this is your first Flutter project:
+## Esta aplicacion: 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Usa principios basicos de arquitectura limpia.
+- Uso de dio para peticiones get.
+- Uso de providers para gestionar el estado de la aplicacion.
+- Personalizacion del tema.
+- Personalizacion de widgets.
+- Trabajando con infraestructura de modelos.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
