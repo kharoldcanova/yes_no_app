@@ -5,17 +5,41 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('Mi Chat 🥣'),
-        centerTitle: true,
-        leading: const Padding(
-          padding:  EdgeInsets.all(4),
-          child:  CircleAvatar(
-            backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzvtBN9ll1dRXFgW-qovdNaE4HGUiBw6AUhMjB64n1gR-4Evm03-7B-V9MilvnEFHDAf4&usqp=CAU', 
-            scale: 3),
-          ),
-        )
+          title: const Text('Mi Chat 🥣'),
+          centerTitle: true,
+          leading: const Padding(
+            padding: EdgeInsets.all(4),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzvtBN9ll1dRXFgW-qovdNaE4HGUiBw6AUhMjB64n1gR-4Evm03-7B-V9MilvnEFHDAf4&usqp=CAU',
+                  scale: 3),
+            ),
+          )),
+      body: _ChatView(),
+    );
+  }
+}
+
+class _ChatView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 100,
+                itemBuilder: (context, index) {
+                return Text('Indice $index');
+              },),
+            ),
+            const Text('Mundo')
+          ],
+        ),
       ),
     );
   }
